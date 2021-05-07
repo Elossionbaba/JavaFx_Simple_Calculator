@@ -1,0 +1,140 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<FlowPane fx:controller="sample.Controller" fx:id="flowPane"
+          xmlns:fx="http://javafx.com/fxml" style="-fx-background-color: #D2D3D5"
+          orientation="VERTICAL" alignment="TOP_CENTER" hgap="10" vgap="10" stylesheets="@styles.css">
+    <padding>
+        <Insets top="20" left="20" right="20"/>
+    </padding>
+
+    <children>
+        <TextField alignment="CENTER_RIGHT" fx:id="resultBox" editable="false" prefWidth="350" prefHeight="70"  >
+
+        </TextField>
+
+        <TextField fx:id="inputBox" alignment="CENTER_RIGHT" editable="false" prefWidth="350" prefHeight="70" />
+
+        <HBox alignment="CENTER" >
+            <Hyperlink fx:id="linkTeamCSG" text="WWW.TEAMCSG.COM.NG" onAction="#DialogView"/>
+        </HBox>
+
+        <Button prefWidth="350" prefHeight="10" style="-fx-background-color:#216DB8" />
+
+        <GridPane hgap="10" vgap="10" style="-fx-background-color:white">
+            <padding>
+                <Insets top="5" left="5" bottom="5" right="5"/>
+            </padding>
+            <children>
+                <Button text="1" layoutY="10.0" layoutX="10.0" fx:id="one" onAction="#HandleNumberClick" GridPane.columnIndex="0" GridPane.rowIndex="0" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+
+                </Button>
+                <Button text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="two" onAction="#HandleNumberClick" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="3" fx:id="three" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#HandleNumberClick" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="-" fx:id="minus" GridPane.columnIndex="3" GridPane.rowIndex="0" onAction="#Minus" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="4" fx:id="four" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="5" fx:id="five" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+
+                <Button text="6" fx:id="six" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="/" fx:id="divide" GridPane.columnIndex="3" GridPane.rowIndex="1" onAction="#Divide" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="7" GridPane.columnIndex="0" GridPane.rowIndex="2" fx:id="seven" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="8" fx:id="eight" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="9" fx:id="nine" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+                <Button text="*" fx:id="multiply" GridPane.columnIndex="3" GridPane.rowIndex="2" onAction="#Multiply" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+
+                <Button text="0" fx:id="zero" GridPane.columnIndex="0" GridPane.rowIndex="3" onAction="#HandleNumberClick" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+
+                <Button text="+" fx:id="plus"  GridPane.columnIndex="1" GridPane.rowIndex="3" onAction="#Plus" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+
+                <Button text="=" fx:id="equalTo"  GridPane.columnIndex="2" GridPane.rowIndex="3" GridPane.columnSpan="2" onAction="#HandleEqual" prefHeight="60" prefWidth="70" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+
+                <Button text="C" fx:id="clear" GridPane.columnIndex="3" GridPane.rowIndex="3" onAction="#Clear" prefWidth="70" prefHeight="60" >
+                    <font>
+                        <Font name="Times New Roman Bold" size="30"/>
+                    </font>
+                </Button>
+
+            </children>
+        </GridPane>
+        <Label text="Java training @CokeCenter IMT Enugu." >
+            <font>
+                <Font size="20" name="Times New Roman"/>
+            </font>
+        </Label>
+        <HBox alignment="CENTER">
+            <Label text="Programmed By Nelson"/>
+        </HBox>
+    </children>
+</FlowPane>

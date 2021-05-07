@@ -1,0 +1,1 @@
+java --module-path D:\Java Templetes\JavaFX\javafx-sdk-11.0.2\lib --add-modules Controller.java, Main.java, sample.fxml, styles.css teamCSGWebpageController TeamCSGCalculator -jar TeamCSGCalculator.jar
